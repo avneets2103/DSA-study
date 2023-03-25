@@ -1,8 +1,7 @@
 #include<iostream>
 #include<vector>
+#include<unordered_map>
 using namespace std;
-
-#include <unordered_map>
 
 int highestFrequency(int arr[], int n) {
     unordered_map<int, int> countMap;
@@ -15,11 +14,13 @@ int highestFrequency(int arr[], int n) {
         }
     } 
 
-    int max = arr[0];
-    for(int i=1; i<n; i++){
-        if(countMap[arr[i]]>countMap[max]){
-            max=arr[i];
+    int max = INT32_MIN;
+    unordered_map<int, int> :: iterator it = countMap.begin();
+    while(it!=countMap.end()){
+        if(it->second > max){
+            max=it->second;
         }
+        it++;
     }
     return max;
 }
