@@ -27,7 +27,7 @@ void kSortedArray(int arr[], int k, int n){
     }
 
     // since after this the last k elements will be left in the pq, thus we remove them and add to array
-    while(pq.empty()){
+    while(!pq.empty()){
         arr[j] = pq.top();
         pq.pop();
         j++;

@@ -36,13 +36,13 @@ void heapSort(int input[], int n){
             }
             else
             {
-                if (input[k] <= min(input[2 * k + 1], input[2 * k + 2]))
+                if (input[k] >= max(input[2 * k + 1], input[2 * k + 2]))
                 {
                     break;
                 }
                 else
                 {
-                    if (input[2 * k + 1] < input[2 * k + 2])
+                    if (input[2 * k + 1] > input[2 * k + 2])
                     {
                         swap(input[k], input[2 * k + 1]);
                         k = 2 * k + 1;
