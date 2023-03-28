@@ -196,6 +196,7 @@ class array{
             if(arr[p1]<arr2->get(p2)){
                 farr[k]=arr[p1];
                 p1++;
+                
             }
             if(arr[p1]>arr2->get(p2)){
                 farr[k]=arr2->get(p2);
